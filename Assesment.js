@@ -1,5 +1,5 @@
 // create a variable to hold your NFT's
-const NFT= [];
+const nft= [];
 
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
@@ -11,7 +11,7 @@ function mintNFT (Uid,name,fruit,private_key) {
       "fruit": fruit,
       "privateKey": private_key
    }
-   NFT.push(mint);
+   nft.push(mint);
    console.log("minted: "+Uid);
 
 }
@@ -19,18 +19,18 @@ function mintNFT (Uid,name,fruit,private_key) {
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
 function listNFTs () {
-   for(i=0;i<NFT.length;i++){
-      console.log("\nuid:" + NFT[i].uid);
-      console.log("name:" + NFT[i].name);
-      console.log("fruit:" + NFT[i].fruit);
-      console.log("privatekey:" + NFT[i].privateKey);
+   for(i=0;i<nft.length;i++){
+      console.log("\nuid:" + nft[i].uid);
+      console.log("name:" + nft[i].name);
+      console.log("fruit:" + nft[i].fruit);
+      console.log("privatekey:" + nft[i].privateKey);
    }
 
 }
 
 // print the total number of NFTs we have minted to the console
 function getTotalSupply() {
-console.log("\ntotal supply mineted: " + NFT.length);
+console.log("\ntotal supply mineted: " + nft.length);
 }
 
 // call your functions below this line
